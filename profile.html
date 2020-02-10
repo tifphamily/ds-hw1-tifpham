@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      <link rel="stylesheet" href="css/profile.css">
+
+<h1> Tiffany Pham </h1>
+
+
+<h6 >Menu</h6>
+<nav class="nav">
+
+  <a href="index.html"> <button> Home Page </button></a>
+  <a href="coursework.html"><button> Academic Coursework </button> </a>
+
+
+</nav><br />
+
+<h3> Profile </h3>
+
+<hr />
+
+<section>
+
+
+<div id = "profileMain" class="row">
+  <button v-on:click="fetchResults"> Refresh </button>
+       <section class="col">
+         <h4>Gender</h4>
+         <h6>{{ info.gender }}</h6>
+          <h4>Name</h4>
+          <h6>{{ info.name.first}} {{ info.name.last }}</h6>
+          <h4>Location</h4>
+          <h6>{{ info.location.city }}</h6>
+          <h4>Email</h4>
+          <a v-bind:href="'mailto:' + info.email " >{{info.email}}</a>
+          <h4>Age</h4>
+          <h6>{{ calc_age }}</h6> <br />
+          <h4>Picture</h4>
+          <a v-bind:href="info.picture.large"><img v-bind:src="info.picture.large"/></a>
+</section>
+</div>
+
+</section>
+<!-- moment.js via CDN-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+
+<!-- development version, includes helpful console warnings -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js/profile.app.js"></script>
+
+
+
+
+
+
+</html>

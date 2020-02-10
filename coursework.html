@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      <link rel="stylesheet" href="css/coursework.css">
+
+<h1> Tiffany Pham </h1>
+
+<h6>Menu</h6>
+<nav class="nav">
+
+  <a href="index.html"> <button> Home Page </button></a>
+  <a href="profile.html"> <button> Profile </button> </a>
+
+</nav>
+
+<hr />
+
+<h4>Academic Coursework History</h4>
+
+<!--picture from tumblr.com-->
+<a href="https://78.media.tumblr.com/3cbe98a2bf1456469df49be7a563d035/tumblr_mucsnv8yvr1skst1yo1_250.png"><img src="img/studying-pusheen.jpg" alt="studying pusheen"></a>
+
+
+
+<table id="taskTable" border="1">
+   <thead>
+        <tr>
+            <th> Course Name</th>
+            <th> Course ID </th>
+            <th> Date Completed </th>
+            <th> Credit Hours </th>
+        </tr>
+    </thead>
+
+        <tr>
+          <td> Computers in Business</td>
+          <td> K201 </td>
+          <td>2014-12-10</td>
+          <td>3</td>
+        </tr>
+
+        <tr>
+          <td> Management Information Systems</td>
+          <td> S302 </td>
+          <td>2015-05-01</td>
+          <td>3</td>
+        </tr>
+
+        <tr>
+          <td>Data Management</td>
+          <td> S307 </td>
+          <td>2016-12-14</td>
+          <td>3</td>
+        </tr>
+
+        <tr>
+          <td> Systems Analysis & Design</td>
+          <td>S310</td>
+          <td>2017-12-08</td>
+          <td>3</td>
+        </tr>
+
+        <tr>
+          <td>Business Application Development</td>
+          <td>S308</td>
+          <td>2018-12-09</td>
+          <td>3</td>
+        </tr>
+
+      </table> <br>
+
+<form id="addclass">
+
+<h6>Add a new class:</h6>
+  <label for="coursename"> Course Name:</label>
+    <input type="string" name="coursename" id="coursename">
+
+  <label for="courseid"> Course ID:</label>
+    <input type="string" name="courseid" id="courseid">
+
+  <label for="datecompleted"> Date Completed:</label>
+    <input type="date" name="datecompleted" id="datecompleted">
+
+    <label for="credithours"> Credit Hours:</label>
+       <input type="number" name="credithours" id="credithours">
+
+</form>
+
+  <script src="js/tablesort.min.js"></script>
+  <script>
+    //Tablesort plug in from https://github.com/tristen/tablesort/demo
+        new Tablesort(document.getElementById("taskTable"));
+    </script>
+
+
+</html>
